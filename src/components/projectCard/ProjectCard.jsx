@@ -1,4 +1,5 @@
 import React from 'react'
+import './projectcard.scss'
 
 const ProjectCard = ({project}) => {
   return (
@@ -7,9 +8,10 @@ const ProjectCard = ({project}) => {
         <img src={project.img} alt="" />
       </div>
       <div className="right">
-        <h3>{project.name}</h3>
-        <p>{project.description}</p>
-        <p>Link: {project.link ? (project.link) : ('undefined')}</p>
+        <p className='title'>{project.name}</p>
+        <p className='description'>{project.description}</p>
+        <p>Link: {project.link ? (<a href={project.link} target="_blank" rel="noopener noreferrer">{project.link}</a>) : ('undefined')}</p>
+        <button>Read More</button>
       </div>
     </div>
   )

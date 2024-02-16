@@ -1,16 +1,20 @@
-import Navbar from "./components/navbar/Navbar";
 import ProjectCard from "./components/projectCard/ProjectCard";
 import './style.scss'
+import Logo from './media/logo.png'
 import { projects_card } from "./project_card";
 
 function App() {
   
   return (
     <div className="home">
-      <h1>This is my projects collection</h1>
-      <h2>For view my portfolio you can click on <a>this link</a></h2>
-      <Navbar />
-      <h1>My Projects</h1>
+      <div className="top_section">
+        <img src={Logo} alt="PellegrinoPiccolo"/>
+        <div className="text_section">
+          <h2>THIS IS ONLY MY PROJECTS COLLECTION</h2>
+          <h2>IF YOU WANT VISIT MY PORTFOLIO YOU CAN CLICK ON <a href="https://pellegrinopiccolo.github.io/" target="_blank">THIS LINK (pellegrinopiccolo.github.io)</a></h2>
+        </div>
+      </div>
+      <h1 className="center">My Projects</h1>
       <div className="card_container">
         {projects_card.map(project=>(
           <ProjectCard project={project}/>

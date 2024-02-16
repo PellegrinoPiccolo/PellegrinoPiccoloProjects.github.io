@@ -1,0 +1,50 @@
+.project_card{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 5em auto;
+    width: 90%;
+    .left{
+        flex: 1;
+        img{
+            width:580px;
+            border-radius: 10px;
+        }
+    }
+    .right{
+        flex: 1;
+        position: relative;
+        .title{
+            font-size: 38px;
+            margin-top: 0;
+        }
+        .description{
+            font-size: 26px;
+            word-break: break-all;
+            text-wrap: wrap;
+        }
+        button{
+            position: absolute;
+            bottom: 1.8em;
+            font-size: 20px;
+            background-color: transparent;
+            border: 1px #C5C5C5 solid;
+            color: #C5C5C5;
+            padding: .5em .8em;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: .3s;
+            font-weight: 600;
+            &:hover{
+                background-color: #C5C5C5;
+                color: rgba(0, 0, 0, 0.904);
+            }
+        }
+    }
+    &:nth-child(2n) {
+        flex-direction: row-reverse;
+        text-align: end;
+        button{
+            right: 0;
+        }
+    }
+}
