@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body{
+    background-color: rgba(0, 0, 0, 0.904);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"slnt" 0;
+}
+
+.home{
+    h1, h2{
+        color: white;
+        text-align: center;
+    }
+}
