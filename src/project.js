@@ -1,18 +1,16 @@
-export const projects_card = [
+export const projects = [
     {
         id: "1",
         name: "Keiben srl",
         description: "This is Keiben, is my first site and I was new to this type of programming. It is a stucco company and it visitable from link in below",
-        img: require('./media/keiben/keiben_home.png'),
-        img2: require('./media/keiben/keiben_product.png'),
+        img: [require('./media/keiben/keiben_home.png'), require('./media/keiben/keiben_product.png')],
         link: "https://www.keibensrl.com/",
     },
     {
         id: "2",
         name: "Keiben srls",
         description: "This is Keiben, is my first site and I was new to this type of programming. It is a stucco company and it visitable from link in below",
-        img: require('./media/keiben/keiben_home.png'),
-        img2: require('./media/keiben/keiben_product.png'),
+        img: [require('./media/keiben/keiben_home.png'), require('./media/keiben/keiben_product.png')],
         link: "https://www.keibensrl.com/",
     },
 ]

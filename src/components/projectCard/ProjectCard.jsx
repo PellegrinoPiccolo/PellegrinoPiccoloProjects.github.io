@@ -1,6 +1,7 @@
 import React from 'react'
 import './projectcard.scss'
 import { useInView } from 'react-intersection-observer';
+import { Link } from "react-router-dom";
 
 const ProjectCard = ({project}) => {
 
@@ -13,14 +14,16 @@ const ProjectCard = ({project}) => {
   return (
     <div ref={ref} className={`project_card ${inView ? 'animation' : ''}`}>
       <div className="image_container">
-        <img src={project.img} alt="" />
+        <img src={project.img[0]} alt="" />
 
       </div>
       <div className="text_container">
         <p className='title poppins-bold'>{project.name}</p>
         <p className='description poppins-regular'>{description.length > maxLength ? description.slice(0, maxLength) + "..." : description}</p>
         <p className='link poppins-bold'>Link: {project.link ? (<a href={project.link} target="_blank" rel="noopener noreferrer">{project.link}</a>) : ('undefined')}</p>
-        <button>Read More</button>
+        <Link to={`/project/${project.id}`}>
+          <button>Read More</button>
+        </Link>
       </div>
     </div>
   )

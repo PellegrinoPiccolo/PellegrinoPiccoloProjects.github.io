@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Footer from './components/footer/Footer';
+import Project from './components/project/Project';
 
 function App() {
 
@@ -28,6 +29,10 @@ function App() {
           path: "/",
           element: <Home />
         },
+        {
+          path: "/project/:id",
+          element: <Project />
+        }
       ]
     },
   ]);

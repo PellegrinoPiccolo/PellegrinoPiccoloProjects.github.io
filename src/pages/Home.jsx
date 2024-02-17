@@ -2,7 +2,7 @@ import React from 'react'
 import ProjectCard from "../components/projectCard/ProjectCard";
 import '../style.scss'
 import Logo from '../media/logo.png'
-import { projects_card } from "../project_card";
+import { projects } from "../project";
 
 const Home = () => {
   return (
@@ -16,7 +16,7 @@ const Home = () => {
       </div>
       <h1 className="center h_page">My Projects</h1>
       <div className="card_container">
-        {projects_card.map(project=>(
+        {projects.map(project=>(
           <ProjectCard project={project}/>
         ))}
       </div>
