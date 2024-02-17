@@ -2,6 +2,7 @@ import ProjectCard from "./components/projectCard/ProjectCard";
 import './style.scss'
 import Logo from './media/logo.png'
 import { projects_card } from "./project_card";
+import Footer from "./components/footer/Footer";
 
 function App() {
   
@@ -20,6 +21,7 @@ function App() {
           <ProjectCard project={project}/>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }
