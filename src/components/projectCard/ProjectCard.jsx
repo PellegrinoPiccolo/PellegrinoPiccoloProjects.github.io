@@ -1,5 +1,6 @@
 import React from 'react'
 import './projectcard.scss'
+import { useInView } from 'react-intersection-observer';
 
 const ProjectCard = ({project}) => {
 
@@ -7,8 +8,10 @@ const ProjectCard = ({project}) => {
 
   const description = project.description
 
+  const [ref, inView] = useInView();
+
   return (
-    <div className='project_card'>
+    <div ref={ref} className={`project_card ${inView ? 'animation' : ''}`}>
       <div className="image_container">
         <img src={project.img} alt="" />
 
