@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 
 body{
-    background-color: rgba(0, 0, 0, 0.904);
+    background-color: rgba(0, 0, 0, 0.87);
     font-family: "Inconsolata", monospace;
 }
 
 .home{
-    h1, h2, p{
+    .h_page{
         color: #C5C5C5;
         text-wrap: wrap;
         word-break: break-all;
@@ -27,5 +27,13 @@ body{
     }
     .card_container{
         margin-top: 5em;
+        width: 90%;
+        padding: 0 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4em;
     }
 }
