@@ -12,7 +12,6 @@ const Slider = ({images, name}) => {
     } else if (slideIndex === images.length - 1){
       setSlideIndex(0)
     }
-    console.log(slideIndex)
   }
 
   const prevSlide = () =>{
@@ -23,6 +22,10 @@ const Slider = ({images, name}) => {
     }
   }
 
+  const handleDotSlider = (index) =>{
+    setSlideIndex(index)
+  }
+
   return (
     <div className='container-slider'>
       {images.map((img, index)=>(
@@ -31,8 +34,13 @@ const Slider = ({images, name}) => {
         </div>
       ))}
       <div className="container_button">
-        <BtnSlider moveSlide={nextSlide} direction={"next"}/>
         <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
+        <BtnSlider moveSlide={nextSlide} direction={"next"}/>
+      </div>
+      <div className="container-dots">
+        {Array.from({length: images.length}).map((item, index) => (
+          <div className={index === slideIndex ? 'dot dot-active' : 'dot'} onClick={()=>handleDotSlider(index)}></div>
+        ))}
       </div>
     </div>
   )
