@@ -7,16 +7,20 @@ const Slider = ({images, name}) => {
   const [slideIndex, setSlideIndex] = useState(0)
 
   const nextSlide = () =>{
-    if(slideIndex !== images.length){
+    if(slideIndex !== images.length - 1){
       setSlideIndex(slideIndex + 1);
     } else if (slideIndex === images.length - 1){
       setSlideIndex(0)
     }
-    console.log(slideIndex);
+    console.log(slideIndex)
   }
 
   const prevSlide = () =>{
-
+    if(slideIndex > 0){
+      setSlideIndex(slideIndex - 1)
+    }else if(slideIndex === 0){
+      setSlideIndex(images.length - 1)
+    }
   }
 
   return (
