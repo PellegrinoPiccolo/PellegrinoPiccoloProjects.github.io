@@ -2,6 +2,7 @@ import React from 'react'
 import './project.scss'
 import { useParams } from 'react-router-dom';
 import { projects } from '../../project';
+import Slider from '../../components/slider/Slider';
 
 const Project = () => {
 
@@ -12,7 +13,7 @@ const Project = () => {
 
   return (
     <div className='project'>
-      
+      <Slider images={project.img} name={project.name} />
     </div>
   )
 }
