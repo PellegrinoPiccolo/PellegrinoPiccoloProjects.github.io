@@ -7,7 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Footer from './components/footer/Footer';
-import Project from './components/project/Project';
+import Project from './pages/project/Project';
 
 function App() {
 
