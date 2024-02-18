@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 
+html {
+    margin: 0;
+    padding: 0;
+}
+
 body{
     background-color: rgba(0, 0, 0, 0.87);
     font-family: "Inconsolata", monospace;
@@ -39,4 +44,9 @@ body{
         flex-wrap: wrap;
         gap: 4em;
     }
+}
+
+a{
+    text-decoration: underline;
+    color: rgb(120, 70, 212);
 }

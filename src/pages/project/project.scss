@@ -1,0 +1,53 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.87);
+    font-family: "Inconsolata", monospace;
+    margin: 0;
+    position: relative;
+    padding: 0 0 20em 0;
+}
+
+.project{
+    .arrow_container{
+        position: fixed;
+        top:.4em;
+        left: .4em;
+        color: lightgray;
+        font-size:28px;
+        cursor: pointer;
+    }
+    .content_container{
+        opacity: 0;
+        animation: ContentFadeIn .5s .5s forwards;
+        width: 80%;
+        margin: 10em auto 0 auto;
+        .project_name{
+            color: lightgray;
+            text-align: center;
+            font-size: 38px;
+        }
+        .project_description{
+            text-align: center;
+            font-size: 18px;
+            color: lightgray;
+            margin-bottom: 2em;
+        }
+        .link{
+            color: lightgray;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:.4em;
+        }
+    }
+}
+
+@keyframes ContentFadeIn {
+    0% { transform: translateY(-1rem); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}

@@ -5,6 +5,7 @@ import {
   createBrowserRouter,
   Outlet,
   RouterProvider,
+  ScrollRestoration,
 } from "react-router-dom";
 import Footer from './components/footer/Footer';
 import Project from './pages/project/Project';
@@ -16,6 +17,7 @@ function App() {
       <>
         <Outlet />
         <Footer />
+        <ScrollRestoration />
       </>
     )
   }
