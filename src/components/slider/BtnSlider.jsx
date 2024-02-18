@@ -3,11 +3,16 @@ import './slider.scss'
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
-const BtnSlider = () => {
+const BtnSlider = ({direction, moveSlide}) => {
+  console.log(direction, moveSlide);
   return (
-    <div>
-      
-    </div>
+    <button onClick={moveSlide} className={direction === 'next' ? 'btn-slide next' : 'btn-slide prev'}>
+      {direction === 'next' ? (
+        <MdKeyboardArrowLeft />
+      ) : (
+        <MdKeyboardArrowRight />
+      )}
+    </button>
   )
 }
 
