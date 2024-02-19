@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ProjectCard from "../components/projectCard/ProjectCard";
 import '../style.scss'
 import Logo from '../media/logo.png'
 import { projects } from "../project";
 
 const Home = () => {
+
+  useEffect(()=>{
+    document.title = "Home - PellegrinoPicoloProjects"
+  }, [])
+
   return (
     <div className="home">
       <div className="top_section">

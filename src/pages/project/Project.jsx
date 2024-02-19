@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './project.scss'
 import { Link, useParams } from 'react-router-dom';
 import { projects } from '../../project';
@@ -13,6 +13,10 @@ const Project = () => {
 
     const filterData = projects.filter(item => item.id === id)
     const project = filterData[0]
+
+    useEffect(()=>{
+      document.title = `${project.name} - PellegrinoPiccoloProjects` 
+    }, [])
 
   return (
     <div className='project'>
