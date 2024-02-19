@@ -17,7 +17,7 @@ function App() {
       <>
         <Outlet />
         <Footer />
-        <ScrollRestoration />
+        {/* <ScrollRestoration /> */}
       </>
     )
   }
@@ -33,7 +33,8 @@ function App() {
         },
         {
           path: "/project/:id",
-          element: <Project />
+          element: [<Project />, <ScrollRestoration />]
+          
         }
       ]
     },
