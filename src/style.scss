@@ -11,6 +11,7 @@ body{
     margin: 0;
     position: relative;
     padding: 0 0 20em 0;
+    min-height: 80vh;
 }
 
 .home{
@@ -68,6 +69,17 @@ a{
         }
         .card_container{
             margin-top: 1.8em;
+        }
+    }
+}
+
+@media screen and (max-width:600px){
+    body{
+        padding-bottom: 12em;
+    }
+    .home{
+        .top_section{
+            margin-top: 2em;
         }
     }
 }

@@ -52,3 +52,30 @@ body{
     0% { transform: translateY(-1rem); opacity: 0; }
     100% { transform: translateY(0); opacity: 1; }
 }
+
+@media screen and (max-width:1000px){
+    .project{
+        .content_container{
+            .project_name{
+                font-size: 28px;
+            }
+            .project_description{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:600px){
+    body{
+        padding-bottom: 12em;
+    }
+    .project{
+        .content_container{
+            .project_description{
+                line-height: 1.2;
+                text-align: justify;
+            }
+        }
+    }
+}

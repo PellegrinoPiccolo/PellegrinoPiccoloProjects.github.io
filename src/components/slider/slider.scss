@@ -84,3 +84,22 @@
     50% {opacity: 1; filter: blur(1px);}
     100% {transform: translateY(0) scale(1.0); opacity: 1; filter: blur(0);}
 }
+
+@media screen and (max-width:1000px){
+    .container-slider{
+        max-width: 480px;
+        height: 280px;
+        .container_button{
+            .btn-slide{
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:600px){
+    .container-slider{
+        width: 300px;
+        height: 180px;
+    }
+}
