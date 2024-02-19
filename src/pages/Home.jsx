@@ -14,7 +14,7 @@ const Home = () => {
           <h2 className="h_page">IF YOU WANT VISIT MY PORTFOLIO YOU CAN CLICK ON <a href="https://pellegrinopiccolo.github.io/" target="_blank">THIS LINK (pellegrinopiccolo.github.io)</a></h2>
         </div>
       </div>
-      <h1 className="center h_page">My Projects</h1>
+      <h1 className="center h_page title_card_container">My Projects</h1>
       <div className="card_container">
         {projects.map(project=>(
           <ProjectCard project={project}/>

@@ -50,3 +50,24 @@ a{
     text-decoration: underline;
     color: rgb(120, 70, 212);
 }
+
+@media screen and (max-width: 1000px){
+    .home{
+        .top_section{
+            width: 90%;
+            flex-direction: column;
+            text-align: center;
+            font-size: 14px;
+            img{
+                margin: 0;
+                width: 60%;
+            }
+        }
+        .title_card_container{
+            font-size: 22px;
+        }
+        .card_container{
+            margin-top: 1.8em;
+        }
+    }
+}

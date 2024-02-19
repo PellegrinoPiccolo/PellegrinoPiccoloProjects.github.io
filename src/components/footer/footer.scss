@@ -17,3 +17,16 @@
         font-size: 22px;
     }
 }
+
+@media screen and (max-width:1000px){
+    .footer{
+        flex-direction: column;
+        img{
+            width: 50%;
+        }
+        p{
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+}

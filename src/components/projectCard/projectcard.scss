@@ -79,3 +79,20 @@
     0% { transform: translateY(-1rem); opacity: 0; }
     100% { transform: translateY(0); opacity: 1; }
     }
+
+@media screen and (max-width:800px){
+    .project_card{
+        height: 355px;
+        .text_container{
+            .title{
+                font-size: 18px;
+            }
+            .description{
+                font-size: 14px;
+            }
+            .link{
+                font-size: 14px;
+            }
+        }
+    }
+}
