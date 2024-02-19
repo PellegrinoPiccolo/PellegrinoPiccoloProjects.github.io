@@ -21,10 +21,10 @@ const ProjectCard = ({project}) => {
         <p className='title poppins-bold'>{project.name}</p>
         <p className='description poppins-regular'>{description.length > maxLength ? description.slice(0, maxLength) + "..." : description}</p>
         <p className='link poppins-bold'>Link: {project.link ? (<a href={project.link} target="_blank" rel="noopener noreferrer">{project.link}</a>) : ('undefined')}</p>
-        <Link to={`/project/${project.id}`}>
+      </div>
+      <Link to={`/project/${project.id}`}>
           <button>Read More</button>
         </Link>
-      </div>
     </div>
   )
 }

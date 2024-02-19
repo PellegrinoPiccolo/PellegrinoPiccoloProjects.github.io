@@ -4,7 +4,7 @@ html {
 }
 
 body{
-    background-color: rgba(0, 0, 0, 0.87);
+    background-color: rgb(34, 34, 34);
     font-family: "Inconsolata", monospace;
     margin: 0;
     position: relative;
@@ -19,6 +19,15 @@ body{
         color: lightgray;
         font-size:28px;
         cursor: pointer;
+        z-index: 99;
+        border: 1px solid white;
+        padding: .1em .2em 0 .2em;
+        border-radius: 50%;
+        background-color: rgb(34, 34, 34);
+        transition: .2s;
+        &:hover{
+            transform: scale(1.1);
+        }
     }
     .content_container{
         opacity: 0;
@@ -44,6 +53,13 @@ body{
             align-items: center;
             justify-content: center;
             gap:.4em;
+            text-wrap: wrap;
+            word-break: break-all;
+            .text_logo{
+                display: flex;
+                align-items: center;
+                gap: .2em;
+            }
         }
     }
 }
@@ -62,6 +78,10 @@ body{
             .project_description{
                 font-size: 18px;
             }
+            .link{
+                flex-direction: column;
+                text-align: center;
+            }
         }
     }
 }
@@ -72,6 +92,7 @@ body{
     }
     .project{
         .content_container{
+            width: 90%;
             .project_description{
                 line-height: 1.2;
                 text-align: justify;
