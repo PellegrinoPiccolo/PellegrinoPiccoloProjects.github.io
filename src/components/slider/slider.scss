@@ -8,6 +8,7 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     opacity: 0;
     animation: SlideFadeIn .5s .2s forwards;
+    vertical-align: middle;
     .slide {
         width: 100%;
         height: 100%;
@@ -22,29 +23,28 @@
     .hidden{
         opacity: 0;
     }
-    .container_button{
-        display: flex;
+    .btn-slide{
+        z-index: 90;
+        color: lightgray;
+        font-size: 40px;
+        cursor: pointer;
+        padding: .2em 0 0 0;
+        background-color: rgb(20, 20, 20);
+        border: none;
+        -webkit-box-shadow: 2px -2px 30px -6px rgba(0,0,0,0.75);
+        -moz-box-shadow: 2px -2px 30px -6px rgba(0,0,0,0.75);
+        box-shadow: 2px -2px 30px -6px rgba(0,0,0,0.75);
+        border-radius: 4px;
+        -ms-transform: translateY(400%);
+        transform: translateY(400%);
+    }
+    .right{
         position: absolute;
-        justify-content: space-between;
-        align-items: center;
-        width: 99%;
-        height: 100%;
-        -ms-transform: translateY(0%);
-        transform: translateY(0%);
-        padding: 0 .5%;
-        .btn-slide{
-            z-index: 99;
-            color: lightgray;
-            font-size: 40px;
-            cursor: pointer;
-            padding: .2em 0 0 0;
-            background-color: rgb(20, 20, 20);
-            border: none;
-            -webkit-box-shadow: 2px -2px 30px -6px rgba(0,0,0,0.75);
-            -moz-box-shadow: 2px -2px 30px -6px rgba(0,0,0,0.75);
-            box-shadow: 2px -2px 30px -6px rgba(0,0,0,0.75);
-            border-radius: 4px;
-        }
+        right: .1em;
+    }
+    .left{
+        position: absolute;
+        left: .1em;
     }
     .container-dots{
         position: absolute;
@@ -89,10 +89,10 @@
     .container-slider{
         max-width: 480px;
         height: 280px;
-        .container_button{
-            .btn-slide{
-                font-size: 28px;
-            }
+        .btn-slide{
+            -ms-transform: translateY(280%);
+            transform: translateY(280%);
+            font-size: 28px;
         }
     }
 }
@@ -101,5 +101,9 @@
     .container-slider{
         width: 300px;
         height: 180px;
+        .btn-slide{
+            -ms-transform: translateY(180%);
+            transform: translateY(180%);
+        }
     }
 }

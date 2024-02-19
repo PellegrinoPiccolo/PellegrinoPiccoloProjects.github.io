@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import './slider.scss'
 import BtnSlider from './BtnSlider'
+import { render } from 'react-dom';
+import ImageViewer from 'react-simple-image-viewer';
 
 const Slider = ({images, name}) => {
 
   const [slideIndex, setSlideIndex] = useState(0)
+
+  const [currentImage, setCurrentImage] = useState(0);
+  const [isViewerOpen, setIsViewerOpen] = useState(false);
 
   const nextSlide = () =>{
     if(slideIndex !== images.length - 1){
@@ -26,23 +31,46 @@ const Slider = ({images, name}) => {
     setSlideIndex(index)
   }
 
+  const openImageViewer = useCallback((index) => {
+    setCurrentImage(index);
+    setIsViewerOpen(true);
+  }, []);
+
+  const closeImageViewer = () => {
+    setCurrentImage(0);
+    setIsViewerOpen(false);
+  };
+
+
   return (
+    <>
     <div className='container-slider'>
       {images.map((img, index)=>(
-        <div className={slideIndex === index ? 'slide' : 'slide hidden'} key={index}>
-            <img src={img} alt={name} />
-        </div>
+        <>
+          <div className={slideIndex === index ? 'slide' : 'slide hidden'} key={index} onClick={ () => openImageViewer(index) }>
+              <img src={img} alt={name}/>
+          </div>
+        </>
       ))}
-      <div className="container_button">
-        <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
-        <BtnSlider moveSlide={nextSlide} direction={"next"}/>
-      </div>
+      <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
+      <BtnSlider moveSlide={nextSlide} direction={"next"}/>
       <div className="container-dots">
         {Array.from({length: images.length}).map((item, index) => (
           <div className={index === slideIndex ? 'dot dot-active' : 'dot'} onClick={()=>handleDotSlider(index)}></div>
         ))}
       </div>
+
     </div>
+    {isViewerOpen && (
+      <ImageViewer
+        src={ images }
+        currentIndex={ currentImage }
+        disableScroll={ false }
+        closeOnClickOutside={ true }
+        onClose={ closeImageViewer }
+      />
+    )}
+    </>
   )
 }
 
