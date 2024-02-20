@@ -1,11 +1,10 @@
 .container-slider{
-    max-width: 900px;
+    max-width: 800px;
     height: 540px;
     margin: 0 auto;
     position: relative;
     top:100px;
-    // overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
     opacity: 0;
     animation: SlideFadeIn .5s .2s forwards;
     vertical-align: middle;
@@ -19,10 +18,12 @@
             height: 100%;
             z-index: 1;
             border-radius: 8px;
+            object-fit: contain;
         }
     }
     .hidden{
         opacity: 0;
+        display: none;
     }
     .btn-slide{
         z-index: 90;

@@ -5,7 +5,7 @@ export const projects = [
         description: "This is Keiben, is my first site and I was new to this type of programming. It is a stucco company and it visitable from link in below. " +
         "To create this site I used the classic html, css and javascript as frontend and as backend I used php with the use of sessions. For example, a session variable is used in the language change, which takes care of storing this information until the browser closes or the session expires. " + 
         "Php was also used to connect with the databases where the data of all the company's products are stored.",
-        img: [require('./media/keiben/img1.png'), require('./media/keiben/img2.png')],
+        img: [require('./media/keiben/keiben_home.png'), require('./media/keiben/keiben_product.png')],
         link: "https://www.keibensrl.com/",
         github_repository: "",
     },
