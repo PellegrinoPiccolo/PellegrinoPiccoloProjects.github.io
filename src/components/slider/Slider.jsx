@@ -47,7 +47,7 @@ const Slider = ({images, name}) => {
     <div className='container-slider'>
       {images.map((img, index)=>(
         <>
-          <div className={slideIndex === index ? 'slide' : 'slide hidden'} key={index} onClick={ () => openImageViewer(index) }>
+          <div className={slideIndex === index ? 'slide' : 'slide hidden'} key={index} onClick={ () => openImageViewer(index) } title={`${name} preview image`}>
               <img src={img} alt={name}/>
           </div>
         </>
@@ -65,7 +65,7 @@ const Slider = ({images, name}) => {
       <ImageViewer
         src={ images }
         currentIndex={ currentImage }
-        disableScroll={ false }
+        disableScroll={ true }
         closeOnClickOutside={ true }
         onClose={ closeImageViewer }
       />
