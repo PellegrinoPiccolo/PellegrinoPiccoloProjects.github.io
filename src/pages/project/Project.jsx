@@ -15,7 +15,7 @@ const Project = () => {
     const project = filterData[0]
 
     useEffect(()=>{
-      document.title = `${project.name} - PellegrinoPiccoloProjects` 
+      document.title = `${project.name} - @PellegrinoPiccolo Projects` 
     }, [])
 
   return (

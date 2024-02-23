@@ -7,7 +7,7 @@ import { projects } from "../project";
 const Home = () => {
 
   useEffect(()=>{
-    document.title = "Home - PellegrinoPicoloProjects"
+    document.title = "Home - @PellegrinoPicolo Projects"
   }, [])
 
   return (
