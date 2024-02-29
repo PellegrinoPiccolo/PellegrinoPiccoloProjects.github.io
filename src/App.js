@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Footer from './components/footer/Footer';
 import Project from './pages/project/Project';
+import Error404 from './pages/error404/Error404';
 
 function App() {
 
@@ -43,7 +44,10 @@ function App() {
         {
           path: "/project/:id",
           element: <Project />
-          
+        },
+        {
+          path: "*",
+          element: <Error404 />
         }
       ]
     },
