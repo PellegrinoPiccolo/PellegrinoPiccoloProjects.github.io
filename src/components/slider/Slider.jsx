@@ -47,19 +47,18 @@ const Slider = ({images, name}) => {
     <div className='container-slider'>
       {images.map((img, index)=>(
         <>
-          <div className={slideIndex === index ? 'slide' : 'slide hidden'} key={index} onClick={ () => openImageViewer(index) } title={`${name} preview image`}>
-              <img src={img} alt={name}/>
+          <div className={slideIndex === index ? 'slide' : 'slide hidden'} key={index} title={`${name} preview image`}>
+              <img src={img} alt={name} onClick={ () => openImageViewer(index) }/>
+              <div className="container-dots">
+              {Array.from({length: images.length}).map((item, index) => (
+                <div className={index === slideIndex ? 'dot dot-active' : 'dot'} onClick={()=>handleDotSlider(index)}></div>
+              ))}
+            </div>
           </div>
         </>
       ))}
       <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
       <BtnSlider moveSlide={nextSlide} direction={"next"}/>
-      <div className="container-dots">
-        {Array.from({length: images.length}).map((item, index) => (
-          <div className={index === slideIndex ? 'dot dot-active' : 'dot'} onClick={()=>handleDotSlider(index)}></div>
-        ))}
-      </div>
-
     </div>
     {isViewerOpen && (
       <ImageViewer
